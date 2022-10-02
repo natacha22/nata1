@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Natacha Denglahod</title>
+	<link rel="stylesheet" href="/assets/bootstrap/bootstrap.min.css">
+	<link rel="stylesheet" href="/assets/css/style.css">
+	<link rel="stylesheet" href="/assets/bs-icon/bootstrap-icons.css">
+	<link href="https://cdn.jsdelivr.net/bootstrap.datepicker-fork/1.3.0/css/datepicker3.css" rel="stylesheet" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/bootstrap.datepicker-fork/1.3.0/js/bootstrap-datepicker.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/bootstrap.datepicker-fork/1.3.0/js/locales/bootstrap-datepicker.th.js"></script>
+	<script>
+		$(function () {
+			$("#datepicker").datepicker({
+				language: 'th-th',
+				format: 'dd/mm/yyyy',
+				autoclose: true
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div class="banner">
+		<div style="text-align: right; color:#fff; padding: 10px 20px;">
+			<i class="fas fa-bars"></i>
+		</div>
+	</div>
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<div class="container">
+			<a class="navbar-brand" href="#" style="font-size:20pt;padding:0px;">
+				<span style="color:yellow; font-weight:bold;">Songkhla</span>
+				&nbsp;Travel
+			</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+				data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<span class="me-auto"></span>
+				<ul class="navbar-nav menu">
+					<li>
+						<a href="#" class="nav_link">หน้าหลัก</a>
+					</li>
+					<li>
+						<a href="#" class="nav_link">ที่ท่องเที่ยว</a>
+					</li>
+					<li>
+						<a href="#" class="nav_link">ร้านอาหาร</a>
+					</li>
+					<li>
+						<a href="#" class="nav_link">ร้านคาเฟ่</a>
+					</li>
+					<li>
+						<a href="#" class="nav_link">ติดต่อเรา</a>
+					</li>
+					<li>
+						<a href="#" class="nav_link" data-bs-toggle="modal"
+							data-bs-target="#registerModal">สมัครสมาชิก</a>
+					</li>
+				</ul>
+				<button class="btn btn-light btn_login" data-bs-toggle="modal" data-bs-target="#loginModal">
+					<i class="bi bi-person-circle"></i>&nbsp; เข้าสู่ระบบ
+				</button>
+			</div>
+		</div>
+	</nav>
+
+</body>
+
+</html>
+
+<!-- Login Modal -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-sm">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">เข้าสู่ระบบ</h5>
+				<i class="bi bi-person-circle"></i>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<form action="" method="POST">
+					<div class="login">
+						<input type="text" name="username" class="form-control" placeholder="ชื่อผู้ใช้">
+					</div>
+					<div class="login">
+						<input type="password" name="password" class="form-control" placeholder="รหัสผ่าน">
+					</div>
+					<div class="login">
+						<button class="btn btn-primary" type="submit">- เข้าสู่ระบบ -</button>
+
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Register Modal -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">สมัครสมาชิก</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<form action="#" method="post">
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-4 mt-3">
+							<label for="title">คำนำหน้า</label>
+							<select name="" id="title" class="form-control" required>
+								<option value=""required>Title</option>
+								<option value="นาย"required>นาย</option>
+								<option value="นาง"required>นาง</option>
+								<option value="นางสาว"required>นางสาว</option>
+							</select>
+						</div>
+						<div class="col-4 mt-3">
+							<label for="firstname">ชื่อ</label>
+							<input type="text" name="" id="firstname" class="form-control" placeholder="Firstname" required>
+						</div>
+						<div class="col-4 mt-3">
+							<label for="lastname">นามสกุล</label>
+							<input type="text" name="" id="lastname" class="form-control" placeholder="Lastname" required>
+						</div>
+
+						<div class="col-4 mt-3">
+							<label for="datepicker">วันเดือนปี เกิด</label>
+							<input type="text" name="datepicker" id="datepicker" class="form-control"placeholder="xx/xx/xxxx" required>
+						</div>
+
+						<div class="col-4 mt-3">
+							<label for="phone">เลขบัตรประจำตัวประชาชน</label>
+							<input type="text" name="idcard" id="idcard" class="form-control"placeholder="x xxxx xxxxx xx x" required>
+						</div>
+
+
+						<div class="col-4 mt-3">
+							<label for="phone">เบอร์โทรศัพท์</label>
+							<input type="text" id="phone" id="datepicker" class="form-control"placeholder="xx xxx xxxxx"required >
+						</div>
+
+						<div class="col-4 mt-3">
+							<label for="email">อีเมล์</label>
+							<input type="email" id="email" id="email" class="form-control"placeholder="xx@xxx.xx"required >
+						</div>
+
+						<div class="col-4 mt-3">
+							<label for="Username">ชื่อเข้าใช้งาน</label>
+							<input type="text" id="email" id="email" class="form-control"placeholder="email"required >
+						</div>
+
+						<div class="col-4 mt-3">
+							<label for="Password">รหัสผ่าน</label>
+							<input type="Password" id="Password" id="Password" class="form-control"placeholder="Password"required >
+						</div>
+
+					   <div class="col-12 mt-3">
+						   <label for="Address">ที่อยู่ปัจจุบัน</label>
+						    <textarea name="" id="address"class="form-control" placeholder="Address"required ></textarea>
+					     
+						</div>
+						
+					</div>
+
+				</div>
+			</div>
+				<div class="modal-footer">
+					<button type="reset" class="btn btn-light">เคลียร์</button>
+					<button type="submit" class="btn btn-primary">สมัครสมาชิก</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<script src="assets/bootstrap/bootstrap.bundle.min.js"></script>
+<script>
+	// เลขบัตร ปชช.
+document.getElementById('idcard').addEventListener('input', function (e) {
+  var x = e.target.value.replace(/\D/g, '').match(/(\d{0,1})(\d{0,4})(\d{0,5})(\d{0,2})(\d{0,1})/);
+  e.target.value = !x[2] ? x[1] : x[1] + ' ' + x[2] + (x[3] ? ' ' + x[3] + ' ' + x[4] + ' ' + x[5] : '');
+});
+
+	//เบอร์โทรศัพท์
+	document.getElementById('phone').addEventListener('input', function (e) {
+		var x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,4})(\d{0,4})/);
+		e.target.value = !x[2] ? x[1] : x[1] + ' ' + x[2] + (x[3] ? ' ' + x[3] : '');
+	});
+</script>
